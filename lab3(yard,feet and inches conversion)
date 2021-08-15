@@ -1,0 +1,75 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+void Yards()   // function to calculate yards
+{
+	float *inch = new float;
+	cout<< "Enter the number of inches to convert: "<<endl;
+	cin >> *inch ;
+	
+	float *yard = new float;
+	*yard = (*inch / 36);
+	
+	cout << "The value after conversion to yards is: "<< *yard<<endl;
+	
+	delete inch;
+	delete yard;
+}
+
+void Feet_and_Inches ()
+{
+	int *inch = new int;
+	cout<< "Enter the number of inches to convert: "<<endl;
+	cin >> *inch ;
+	
+	int *feet = new int;
+	*feet = (*inch / 12);
+	
+	int *in = new int;
+	*in = (*inch % 12);
+	
+	cout << "The value after conversion to feet and inches is: "<< *feet << "feet and "<< *in << " inches  "  <<endl;
+	
+	delete inch;
+	delete feet;
+	delete in;
+}
+
+
+
+int main()
+{       
+	int ch;    
+	do
+	{
+		
+		cout << "1. Inches to Yards "<<endl;
+		cout << "2. Inches to Feet and Inches "<<endl;
+		cout << "3. Exit "<<endl;
+		cout << "Enter your choice : ";
+		cin >> ch ;
+		cout << endl;
+		
+		switch (ch)
+		{
+			case 1: Yards();
+			        break;
+			case 2: Feet_and_Inches();
+			        break;
+			case 3: cout<< "Thank you! "<<endl;
+			        break;
+			default: cout << "Invalid choice! Please enter a correct option .";                 	
+		}
+		
+	}while(ch != 3);
+
+}
+
