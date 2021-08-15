@@ -41,7 +41,7 @@ inline double volco(double x,double y)
 
 int main() {
 
-  double a1 = 2 ,a5=4.5, a6 = 4.2; //as above a1, and a5 are copied in int x
+  double a1 = 2 ,a5=4.5, a6 = 4.2; 
   float a2 = 2, a3 = 5, a4 =3;
 
      cout << "\nThe volume of the cube is: "<< volc(a1);
