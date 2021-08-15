@@ -26,10 +26,10 @@ cin >> *(marks+i);
 }
 for( int j = 0; j < l; j++ )
 {
-sum += *(marks+j); // sum = sum + *(marks + j)
+sum += *(marks+j); 
 }
 
-float avg = (float)sum / l;  // explicit typecasting
+float avg = (float)sum / l; 
 cout << "The average marks of the class is: " << avg;
 
 }
